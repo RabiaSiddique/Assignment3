@@ -40,11 +40,15 @@ public class ColourTable {
         return num != 0 && ((num & (num - 1)) == 0);
     }
 
-    public void addColour(String newColour) {
+
+
+    public HashSet createTable() {
+        HashSet<String> colourArray=new HashSet<>();
+        return colourArray;
     }
 
-    public void createTable() {
-        HashSet<String> colourArray=new HashSet<>();
+    public void addColour(HashSet table, String newColour){
+        table.add(newColour);
     }
 
 
