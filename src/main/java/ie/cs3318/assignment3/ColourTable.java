@@ -2,7 +2,10 @@ package ie.cs3318.assignment3;
 
 
 public class ColourTable {
+    private final int noOfColoursInPalette;
+
     public ColourTable(int noOfColoursInPalette) {
+        this.noOfColoursInPalette = noOfColoursInPalette;
 
     }
 
@@ -10,7 +13,7 @@ public class ColourTable {
 //        return null;
         //        String message = null;
 
-            if (isPowerOfTwo(noOfColoursInPalette) && noOfColoursInPalette < 1025 && noOfColoursInPalette > 1) {
+        if (isPowerOfTwo(noOfColoursInPalette) && noOfColoursInPalette < 1025 && noOfColoursInPalette > 1) {
 //                message = String.format("ColourTable can contain %s many values", noOfColoursInPalette);
                 return noOfColoursInPalette;
             }
