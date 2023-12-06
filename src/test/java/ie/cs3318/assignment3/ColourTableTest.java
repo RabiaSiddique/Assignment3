@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ColourTableTest {
 //    @Test
@@ -32,17 +33,42 @@ public class ColourTableTest {
     };
 
 
+//    @ParameterizedTest
+//    @ValueSource(ints = {1754})
+//    public void tableNotFollowingSizeGuidelines (int value){
+//        ColourTable colourTable = new ColourTable(value);
+//
+////        assertEquals(value, colourTable.evaluate());
+//
+//        System.out.println(colourTable.correctSize());
+//
+//        HashSet colourArray = colourTable.createTable();
+//        colourTable.addColour(colourArray, "FFFFFF");
+//
+////        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
+//    };
+
     @ParameterizedTest
-    @ValueSource(ints = {1754})
-    public void tableNotFollowingSizeGuidelines(int value){
-        ColourTable colourTable = new ColourTable(value);
+    @ValueSource(ints = {5, 1754, 1})
+    public void tableNotFollowingSizeGuidelinesSoNullPointer(int value) {
+        assertThrows(NullPointerException.class,
+                ()->{
+            ColourTable colourTable = new ColourTable(value);
+            HashSet colourArray = colourTable.createTable();
+                    colourTable.addColour(colourArray, "FFFFFF");
+
+
+                    //do whatever you want to do here
+                    //ex : objectName.thisMethodShoulThrowNullPointerExceptionForNullParameter(null);
+                });
+    }
 
 //        assertEquals(value, colourTable.evaluate());
 
-        System.out.println(colourTable.correctSize());
-
-        HashSet colourArray = colourTable.createTable();
-        colourTable.addColour(colourArray, "FFFFFF");
+//        System.out.println(colourTable.correctSize());
+//
+//        HashSet colourArray = colourTable.createTable();
+//        colourTable.addColour(colourArray, "FFFFFF");
 
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
@@ -63,4 +89,4 @@ public class ColourTableTest {
 
 
 
-}
+
