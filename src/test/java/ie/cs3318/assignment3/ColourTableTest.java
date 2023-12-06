@@ -14,27 +14,12 @@ public class ColourTableTest {
 //    @Test
     @ParameterizedTest
     @ValueSource(ints = {1024, 2, 1, 1025, 87})
-    public void createTable(int value) throws Exception {
+    public void createTable(int value){
         ColourTable colourTable = new ColourTable(value);
 
         assertEquals(value, colourTable.evaluate());
 
-        HashSet colourArray = colourTable.createTable();
-
-        colourTable.addColour(colourArray, "FFFFFF");
-
-        colourTable.addColour(colourArray, "FFFFF1");
-
-        colourTable.getColours(colourArray);
-//        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
-    };
-
-    @ParameterizedTest
-    @ValueSource(ints = {1024})
-    public void createTableWithoutParam(int value) throws Throwable {
-        ColourTable colourTable = new ColourTable();
-
-        assertEquals(value, colourTable.evaluate());
+        colourTable.correctSize(value);
 
         HashSet colourArray = colourTable.createTable();
 
@@ -45,6 +30,7 @@ public class ColourTableTest {
         colourTable.getColours(colourArray);
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
+
 
 //    @ParameterizedTest
 //    @ValueSource( strings = {"a"})

@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class ColourTable {
     private final int noOfColoursInPalette;
 
-    public ColourTable(int noOfColoursInPalette) {
+    public ColourTable(int noOfColoursInPalette){
         this.noOfColoursInPalette = noOfColoursInPalette;
     }
 
@@ -48,6 +48,7 @@ public class ColourTable {
     }
 
     public void addColour(HashSet table, String newColour){
+        if (table.size() < 1025)
         table.add(newColour);
     }
 
