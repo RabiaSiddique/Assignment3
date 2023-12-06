@@ -3,6 +3,8 @@ package ie.cs3318.assignment3;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ColourTable {
     private final int noOfColoursInPalette;
@@ -55,8 +57,13 @@ public class ColourTable {
 
 
     public void addColour(HashSet table, String newColour){
-        if (table.size() < 1025)
+        if (table.size() < 1025 && isValidHexCode(newColour) == true)
         table.add(newColour);
+
+        else if (isValidHexCode(newColour) == false) {
+            System.out.println("The colour code is invalid");
+        }
+
     }
 
     public void getColours(HashSet table) {
@@ -74,6 +81,43 @@ public class ColourTable {
         else{
             return false;
         }
+    }
+
+    public boolean isValidHexCode(String newColour) {
+//        if (newColour.charAt(0) != '#')
+//            return false;
+//
+//        if (!(newColour.length() == 4 || newColour.length() == 7))
+//            return false;
+//
+//        for (int i = 1; i < newColour.length(); i++)
+//            if (!((newColour.charAt(i) >= '0' && newColour.charAt(i) <= 9)
+//                    || (newColour.charAt(i) >= 'a' && newColour.charAt(i) <= 'f')
+//                    || (newColour.charAt(i) >= 'A' || newColour.charAt(i) <= 'F')))
+//                return false;
+//
+//        return true;
+
+        // Regex to check valid hexadecimal color code.
+        String regex = "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
+
+        // Compile the ReGex
+        Pattern p = Pattern.compile(regex);
+
+        // If the string is empty
+        // return false
+        if (newColour == null) {
+            return false;
+        }
+
+        // Pattern class contains matcher() method
+        // to find matching between given string
+        // and regular expression.
+        Matcher m = p.matcher(newColour);
+
+        // Return if the string
+        // matched the ReGex
+        return m.matches();
     }
 
 //    private int noOfColoursInPalette;

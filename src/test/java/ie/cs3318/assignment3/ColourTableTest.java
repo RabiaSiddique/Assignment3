@@ -24,11 +24,31 @@ public class ColourTableTest {
 
         HashSet colourArray = colourTable.createTable();
 
-        colourTable.isValidHexCode("FFFFFF");
+        colourTable.isValidHexCode("#9253cb");
 
-        colourTable.addColour(colourArray, "FFFFFF");
 
-        colourTable.addColour(colourArray, "FFFFF1");
+        colourTable.addColour(colourArray, "#9253cb");
+
+        colourTable.addColour(colourArray, "#9253cb");
+
+        colourTable.getColours(colourArray);
+//        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
+    };
+
+    @ParameterizedTest
+    @ValueSource(ints = {4})
+    public void inValidHexCode(int value){
+        ColourTable colourTable = new ColourTable(value);
+
+        assertEquals(value, colourTable.evaluate());
+
+        colourTable.correctSize();
+
+        HashSet colourArray = colourTable.createTable();
+
+        colourTable.isValidHexCode("#zzzzzz");
+
+        colourTable.addColour(colourArray, "#zzzzzz");
 
         colourTable.getColours(colourArray);
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
