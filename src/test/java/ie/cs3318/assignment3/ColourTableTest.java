@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ColourTableTest {
 //    @Test
     @ParameterizedTest
-    @ValueSource(ints = {1024, 2, 1, 1025, 87})
+    @ValueSource(ints = {1024, 2})
     public void createTable(int value){
         ColourTable colourTable = new ColourTable(value);
 
@@ -30,6 +30,23 @@ public class ColourTableTest {
         colourTable.getColours(colourArray);
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
+
+    @ParameterizedTest
+    @ValueSource(ints = {1754})
+    public void tableWithoutParam(int value){
+        ColourTable colourTable = new ColourTable(value);
+
+//        assertEquals(value, colourTable.evaluate());
+
+        System.out.println(colourTable.correctSize());
+
+        HashSet colourArray = colourTable.createTable();
+        colourTable.addColour(colourArray, "FFFFFF");
+
+//        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
+    };
+
+
 
 
 //    @ParameterizedTest

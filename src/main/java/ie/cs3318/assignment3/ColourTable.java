@@ -42,10 +42,17 @@ public class ColourTable {
     }
 
 
-    public HashSet createTable() {
-        HashSet<String> colourArray=new HashSet<>();
-        return colourArray;
+        public HashSet createTable () {
+
+        if (correctSize() == true) {
+            HashSet<String> colourArray = new HashSet<>();
+            return colourArray;
+        } else {
+            return null;
+        }
+
     }
+
 
     public void addColour(HashSet table, String newColour){
         if (table.size() < 1025)
