@@ -2,9 +2,7 @@ package ie.cs3318.assignment3;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
 import java.util.HashSet;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ColourTableTest {
