@@ -42,7 +42,6 @@ public class ColourTable {
     }
 
 
-
     public HashSet createTable() {
         HashSet<String> colourArray=new HashSet<>();
         return colourArray;
@@ -52,11 +51,12 @@ public class ColourTable {
         table.add(newColour);
     }
 
-    public HashSet getColours(HashSet table) {
-        Iterator<String> itr=table.iterator();
-        while(itr.hasNext()){
+    public void getColours(HashSet table) {
+        Iterator<String> itr = table.iterator();
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+    }
 
 //    private int noOfColoursInPalette;
 //
@@ -116,11 +116,5 @@ public class ColourTable {
 
 
 
-
-
-
-
-
-
-}
+    }
 

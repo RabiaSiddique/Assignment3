@@ -23,6 +23,25 @@ public class ColourTableTest {
 
         colourTable.addColour(colourArray, "FFFFFF");
 
+        colourTable.addColour(colourArray, "FFFFF1");
+
+        colourTable.getColours(colourArray);
+//        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
+    };
+
+    @ParameterizedTest
+    @ValueSource(ints = {1024})
+    public void createTableWithoutParam(int value) throws Throwable {
+        ColourTable colourTable = new ColourTable();
+
+        assertEquals(value, colourTable.evaluate());
+
+        HashSet colourArray = colourTable.createTable();
+
+        colourTable.addColour(colourArray, "FFFFFF");
+
+        colourTable.addColour(colourArray, "FFFFF1");
+
         colourTable.getColours(colourArray);
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
