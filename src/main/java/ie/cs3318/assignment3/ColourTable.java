@@ -51,7 +51,8 @@ public class ColourTable {
         table.add(newColour);
     }
 
-    public void getColours() {
+    public HashSet getColours(HashSet table) {
+
     }
 
 

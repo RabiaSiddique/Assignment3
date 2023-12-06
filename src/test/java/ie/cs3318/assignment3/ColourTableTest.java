@@ -6,6 +6,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ColourTableTest {
@@ -17,9 +19,11 @@ public class ColourTableTest {
 
         assertEquals(value, colourTable.evaluate());
 
-        colourTable.addColour(colourTable.createTable(), "FFFFFF");
+        HashSet colourArray = colourTable.createTable();
 
-        colourTable.getColours();
+        colourTable.addColour(colourArray, "FFFFFF");
+
+        colourTable.getColours(colourArray);
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
 
