@@ -18,6 +18,8 @@ public class ColourTableTest {
         assertEquals(value, colourTable.evaluate());
 
         colourTable.addColour(colourTable.createTable(), "FFFFFF");
+
+        colourTable.getColours();
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
 
