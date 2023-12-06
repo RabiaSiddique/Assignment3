@@ -51,6 +51,9 @@ public class ColourTable {
         table.add(newColour);
     }
 
+    public void getColours() {
+    }
+
 
 //    private int noOfColoursInPalette;
 //
