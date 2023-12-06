@@ -2,10 +2,13 @@ package ie.cs3318.assignment3;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class ColourTableTest {
     @Test
     public void createTable(){
         ColourTable colourTable = new ColourTable(1024);
+        assertEquals(1024, colourTable.evaluate());
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     }
 
