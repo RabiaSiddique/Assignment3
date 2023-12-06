@@ -6,8 +6,9 @@ public class ColourTable {
 
     public ColourTable(int noOfColoursInPalette) {
         this.noOfColoursInPalette = noOfColoursInPalette;
-
     }
+
+
 
     public Object evaluate() {
 //        return null;

@@ -17,6 +17,8 @@ public class ColourTableTest {
 
         assertEquals(value, colourTable.evaluate());
 
+        colourTable.createTable();
+
         colourTable.addColour("FFFFFF");
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
