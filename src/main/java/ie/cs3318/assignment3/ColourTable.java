@@ -59,6 +59,16 @@ public class ColourTable {
         }
     }
 
+    public boolean correctSize() {
+        if (isPowerOfTwo(noOfColoursInPalette) && noOfColoursInPalette < 1025 && noOfColoursInPalette > 1) {
+//                message = String.format("ColourTable can contain %s many values", noOfColoursInPalette);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 //    private int noOfColoursInPalette;
 //
 //    public ColourTable(int noOfColoursInPalette) {

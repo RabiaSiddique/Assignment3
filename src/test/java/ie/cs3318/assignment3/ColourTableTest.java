@@ -19,7 +19,7 @@ public class ColourTableTest {
 
         assertEquals(value, colourTable.evaluate());
 
-        colourTable.correctSize(value);
+        colourTable.correctSize();
 
         HashSet colourArray = colourTable.createTable();
 
