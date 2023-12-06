@@ -14,6 +14,7 @@ public class ColourTableTest {
     @ValueSource(ints = {1024, 2, 1, 1025, 87})
     public void createTable(int value) throws Exception {
         ColourTable colourTable = new ColourTable(value);
+
         assertEquals(value, colourTable.evaluate());
 
         colourTable.addColour("FFFFFF");
