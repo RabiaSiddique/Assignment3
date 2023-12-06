@@ -31,9 +31,10 @@ public class ColourTableTest {
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
 
+
     @ParameterizedTest
     @ValueSource(ints = {1754})
-    public void tableWithoutParam(int value){
+    public void tableNotFollowingSizeGuidelines(int value){
         ColourTable colourTable = new ColourTable(value);
 
 //        assertEquals(value, colourTable.evaluate());
@@ -45,8 +46,6 @@ public class ColourTableTest {
 
 //        assertEquals(1024, "[FFFFFF]", colourTable.evaluate());
     };
-
-
 
 
 //    @ParameterizedTest
