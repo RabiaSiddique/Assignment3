@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class ColourTableTest {
 //    @Test
     @ParameterizedTest
-    @ValueSource(ints = {1024, 2})
+    @ValueSource(ints = {1024, 2, 32})
     public void createTable(int value){
         ColourTable colourTable = new ColourTable(value);
 
@@ -23,6 +23,8 @@ public class ColourTableTest {
         colourTable.correctSize();
 
         HashSet colourArray = colourTable.createTable();
+
+        colourTable.isValidHexCode("FFFFFF");
 
         colourTable.addColour(colourArray, "FFFFFF");
 
@@ -62,6 +64,7 @@ public class ColourTableTest {
                     //ex : objectName.thisMethodShoulThrowNullPointerExceptionForNullParameter(null);
                 });
     }
+
 
 //        assertEquals(value, colourTable.evaluate());
 
