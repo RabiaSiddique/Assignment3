@@ -2,6 +2,7 @@ package ie.cs3318.assignment3;
 
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class ColourTable {
     private final int noOfColoursInPalette;
@@ -52,9 +53,10 @@ public class ColourTable {
     }
 
     public HashSet getColours(HashSet table) {
-
-    }
-
+        Iterator<String> itr=table.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
 
 //    private int noOfColoursInPalette;
 //
