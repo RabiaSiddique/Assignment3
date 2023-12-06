@@ -15,17 +15,17 @@ public class ColourTable {
 
 
 
-    public Object evaluate() {
-//        return null;
-        //        String message = null;
-
-        if (isPowerOfTwo(noOfColoursInPalette) && noOfColoursInPalette < 1025 && noOfColoursInPalette > 1) {
-//                message = String.format("ColourTable can contain %s many values", noOfColoursInPalette);
-                return noOfColoursInPalette;
-            }
-            else{
-                return "Number is not within the valid range.";
-            }
+//    public Object evaluate() {
+////        return null;
+//        //        String message = null;
+//
+//        if (isPowerOfTwo(noOfColoursInPalette) && noOfColoursInPalette < 1025 && noOfColoursInPalette > 1) {
+////                message = String.format("ColourTable can contain %s many values", noOfColoursInPalette);
+//                return noOfColoursInPalette;
+//            }
+//            else{
+//                return "Number is not within the valid range.";
+//            }
 
 
 //        catch (Exception e) {
@@ -34,7 +34,7 @@ public class ColourTable {
 //        }
 
 //        return "Number is not valid";
-    }
+//    }
 
     static boolean isPowerOfTwo(int num)
     {
