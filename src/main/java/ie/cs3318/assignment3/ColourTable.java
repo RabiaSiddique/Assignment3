@@ -1,6 +1,8 @@
 package ie.cs3318.assignment3;
 
 
+import java.util.HashSet;
+
 public class ColourTable {
     private final int noOfColoursInPalette;
 
@@ -39,6 +41,10 @@ public class ColourTable {
     }
 
     public void addColour(String newColour) {
+    }
+
+    public void createTable() {
+        HashSet<String> colourArray=new HashSet<>();
     }
 
 
